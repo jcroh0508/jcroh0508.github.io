@@ -15,7 +15,7 @@ layouts_gallery:
 
 <style>
 
-/* Hide follow buttons */
+/* Hide follow buttons - more aggressive selectors */
 .follow-button,
 [class*="follow"],
 [id*="follow"],
@@ -23,9 +23,16 @@ layouts_gallery:
 #follow,
 button[class*="follow"],
 a[class*="follow"],
-div[class*="follow"] {
+div[class*="follow"],
+.btn--inverse,
+.author__urls-wrapper button,
+.author__urls-wrapper .btn {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
 }
 
 /* More specific selectors for common platforms */
@@ -36,6 +43,14 @@ div[class*="follow"] {
 .followButton,
 .follow-widget {
     display: none !important;
+}
+
+/* Prevent font size scaling on mobile */
+html {
+    -webkit-text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
 }
 
 .profile-header {
