@@ -344,6 +344,107 @@ html {
   }
 }
 
+
+/* Force consistent layout at all screen sizes */
+.page__inner-wrap {
+  max-width: 100% !important;
+}
+
+.page__content {
+  max-width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* Hide sidebar and author profile completely */
+.sidebar,
+.author__avatar,
+.author__content,
+.author__name,
+.author__bio,
+.author__urls,
+.author__urls-wrapper,
+aside {
+  display: none !important;
+}
+
+/* More aggressive follow button hiding */
+button:contains("Follow"),
+a:contains("Follow"),
+[aria-label*="follow" i],
+[title*="follow" i] {
+  display: none !important;
+}
+
+/* Prevent layout shift on smaller screens */
+@media (max-width: 1024px) {
+  .page {
+    width: 100% !important;
+    float: none !important;
+  }
+  
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* Override theme's responsive breakpoints */
+@media (max-width: 768px) {
+  /* Keep desktop layout */
+  .profile-header {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+  
+  .profile-info h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  .social-icons {
+    justify-content: flex-start !important;
+  }
+  
+  /* Prevent theme from forcing mobile styles */
+  .page__content {
+    font-size: 1rem !important;
+  }
+  
+  body {
+    font-size: 1rem !important;
+  }
+}
+
+/* Additional fix for very small screens if you still want desktop layout */
+@media (max-width: 480px) {
+  /* Override your existing mobile styles if you want desktop layout everywhere */
+  .profile-header {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+  
+  .profile-photo img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Force hide ALL theme sidebars and follow elements */
+.sidebar, .author__urls-wrapper, aside, .author__avatar, .author__content {
+  display: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Disable responsive font scaling completely */
+* {
+  -webkit-text-size-adjust: none !important;
+  text-size-adjust: none !important;
+}
+
 </style>
 
 
@@ -426,7 +527,7 @@ Prior to my graduate studies, I earned my bachelor's degree in computer engineer
         <img src="/images/brave_software.png" 
              alt="Brave Software Logo" 
              class="logo-emoji"> 
-        I am currently doing a Summer Research Internship at Brave Software working on privacy and security of AI agents with <a href="https://alishahin.github.io/">Ali Shahin Shamsabadi</a>.
+        I have recently completed my Summer Research Internship at Brave Software where I worked on privacy and security of AI agents with <a href="https://alishahin.github.io/">Ali Shahin Shamsabadi</a>.
 </p>
 
 
