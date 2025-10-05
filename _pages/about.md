@@ -140,172 +140,192 @@ div[class*="follow"] {
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .profile-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2rem !important;
   }
-  
+
   .profile-photo img {
-    width: 150px;
-    height: 150px;
+    width: 150px !important;
+    height: 150px !important;
   }
-  
+
+  .profile-info {
+    width: 100% !important;
+  }
+
   .profile-info h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
-  
+
   .social-icons {
-    justify-content: center;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  /* Ensure main content area adapts */
+  .page__content {
+    padding: 1rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .profile-header {
-    padding: 1rem 0.5rem;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem 0.5rem !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
   }
-  
+
   .profile-photo img {
-    width: 120px;
-    height: 120px;
+    width: 120px !important;
+    height: 120px !important;
   }
-  
+
   .profile-info h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.6rem !important;
+    margin-bottom: 0.3rem !important;
   }
-  
+
   .profile-info .title,
   .profile-info .affiliation {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
   }
-  
+
   .social-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    margin: 0.8rem 0;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+    margin: 0.8rem 0 !important;
   }
-  
+
   .social-icon {
-    width: 42px;
-    height: 32px;
+    width: 42px !important;
+    height: 32px !important;
     border-radius: 4px !important;
   }
-  
+
   .social-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 16px !important;
+    height: 16px !important;
   }
-  
+
   .cv-text {
-    font-size: 16px;
+    font-size: 16px !important;
   }
-  
+
   .paper-container {
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    gap: 0.8rem;
+    flex-direction: column !important;
+    margin-bottom: 1.5rem !important;
+    gap: 0.8rem !important;
   }
-  
+
   .paper-image-container,
   .paper-image {
-    width: 100%;
-    height: 120px;
+    width: 100% !important;
+    height: 120px !important;
   }
-  
+
   .paper-title {
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
   }
-  
+
   h2 {
     font-size: 1.3rem !important;
     margin-bottom: 1rem !important;
   }
-  
+
   h4 {
     font-size: 1.1rem !important;
     margin-bottom: 0.8rem !important;
   }
-  
+
   #news {
     margin: 1.5rem 0 !important;
   }
-  
+
   #news > div {
     height: 200px !important;
     padding: 0.8rem !important;
   }
-  
+
   .text-with-logo {
     font-size: 14px !important;
   }
-  
+
   /* Improve text readability on small screens */
   body {
     line-height: 1.6 !important;
-    padding: 0 1rem;
+    padding: 0 1rem !important;
   }
-  
+
   p {
     font-size: 0.9rem !important;
     line-height: 1.6 !important;
     margin-bottom: 1rem !important;
   }
-  
+
   /* Better spacing for paper sections */
   .paper-content {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 !important;
   }
-  
+
   .paper-authors {
     font-size: 0.85rem !important;
   }
-  
+
   .paper-venue {
     font-size: 0.85rem !important;
   }
-  
+
   .paper-links {
     font-size: 0.8rem !important;
+  }
+
+  /* Ensure theme content wrapper doesn't override */
+  .page {
+    width: 100% !important;
+  }
+
+  .page__inner-wrap {
+    width: 100% !important;
+    padding: 0 !important;
   }
 }
 
 @media (max-width: 320px) {
   .profile-header {
-    padding: 0.8rem 0.3rem;
+    padding: 0.8rem 0.3rem !important;
   }
-  
+
   .profile-info h1 {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
-  
+
   .profile-info .title,
   .profile-info .affiliation {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
   }
-  
+
   .social-icon {
-    width: 38px;
-    height: 30px;
+    width: 38px !important;
+    height: 30px !important;
   }
-  
+
   .social-icon svg {
-    width: 14px;
-    height: 14px;
+    width: 14px !important;
+    height: 14px !important;
   }
-  
+
   .cv-text {
-    font-size: 14px;
+    font-size: 14px !important;
   }
-  
+
   body {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem !important;
   }
 }
 
